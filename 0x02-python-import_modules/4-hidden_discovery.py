@@ -1,9 +1,7 @@
-#!/usr/bin/python
+#!/usr/bin/python3
 if __name__ == "__main__":
     import hidden_4
 
-    module = dir(hidden_4)
-    for i in module:
-        if i[0] != "_":
+    for i in dir(hidden_4):
+        if i[0:2] != "__":
             print("{}".format(i))
-    
