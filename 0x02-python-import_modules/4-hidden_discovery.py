@@ -2,7 +2,8 @@
 if __name__ == "__main__":
     import hidden_4
 
-    module = dir(hidden_4.pyc)
-    for i in len(module):
+    module = dir(hidden_4)
+    for i in module:
         if i[0] != "_":
-            print("{}.format(i)")
+            print("{}".format(i))
+    
