@@ -1,9 +1,9 @@
 #!/usr/bin/python3
-"""Write a class Square that defines a square by: (based on 1-square.py)"""
+"""Class Square that defines a square"""
 
 
 class Square:
-    """Write a class that defines a square by: (based on 1-square.py)"""
+    """Instantiation a square"""
     def __init__(self, size=0):
 
         if type(size) != int:
