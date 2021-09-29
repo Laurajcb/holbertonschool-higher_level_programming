@@ -57,7 +57,7 @@ class Rectangle:
         return hash
 
     def __repr__(self):
-        return "Rectangle({:d}, {:d})".format(self.__width, self.__height)
+        return "Rectangle(" + str(self.width) + "," + str(self.height) + ")"
 
     def __del__(self):
         type(self).number_of_instances -= 1
