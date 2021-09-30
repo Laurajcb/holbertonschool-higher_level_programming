@@ -9,9 +9,9 @@ class Rectangle:
     print_symbol = "#"
 
     def __init__(self, width=0, height=0):
-        Rectangle.number_of_instances += 1
         self.__width = width
         self.__height = height
+        Rectangle.number_of_instances += 1
 
     @property
     def width(self):
@@ -58,10 +58,10 @@ class Rectangle:
         return hash
 
     def __repr__(self):
-        return "Rectangle(" + str(self.width) + "," + str(self.height) + ")"
+        return "Rectangle({:d}, {:d})".format(self.__width, self.__height)
 
     def __del__(self):
-        type(self).number_of_instances -= 1
+        Rectangle.number_of_instances -= 1
         print("Bye rectangle...")
 
     @staticmethod
