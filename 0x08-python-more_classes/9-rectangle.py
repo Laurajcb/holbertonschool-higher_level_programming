@@ -78,4 +78,4 @@ class Rectangle:
     def square(cls, size=0):
         """Class method to convert rectangle to square
         """
-        return cls(size, size)
+        return Rectangle(size, size)
