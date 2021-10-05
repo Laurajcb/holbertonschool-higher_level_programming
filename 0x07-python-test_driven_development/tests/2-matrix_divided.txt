@@ -100,3 +100,19 @@ Should raise an exception TypeError for tuple of lists:
     Traceback (most recent call last):
     ...
     TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+Test division by nan:
+    >>> matrix_divided([[2, 4, 8], [1, 2, 3]], float('nan'))
+    [[nan, nan, nan], [nan, nan, nan]]
+
+Test empty matrix:
+    >>> matrix_divided([[]], 10)
+    Traceback (most recent call last):
+    ...
+    TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+Test matrix with non number
+    >>> matrix_divided([[2, 4, 8], [1, "foo", 3]], 2)
+    Traceback (most recent call last):
+    ...
+    TypeError: matrix must be a matrix (list of lists) of integers/floats
