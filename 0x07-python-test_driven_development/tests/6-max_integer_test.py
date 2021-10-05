@@ -139,13 +139,5 @@ class TestMaxInteger(unittest.TestCase):
         with self.assertRaises(TypeError):
             max_integer([{20: 23, 14: 45}, {"a": "b"}])
 
-
-
-
-
-
-
-
-
 if __name__ == '__main__':
     unittest.main()

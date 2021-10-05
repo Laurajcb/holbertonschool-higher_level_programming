@@ -74,3 +74,9 @@ Should raise an exception ValueError for negative size:
     Traceback (most recent call last):
     ...
     ValueError: size must be >= 0
+
+Should raise an exception ValueError for float nan size:
+    >>> print_square(float('NaN'), 2)
+    Traceback (most recent call last):
+    ...
+    TypeError: print_square() takes 1 positional argument but 2 were given
