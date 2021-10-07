@@ -14,13 +14,29 @@ Import module:
 Tests:
 -----
 
-Should print the splited text:
+    Should print the splited text:
     >>> text_indentation("Lorem ipsum dolor? sit amet, consectetur. adipiscing elit")
     Lorem ipsum dolor?
     <BLANKLINE>
     sit amet, consectetur.
     <BLANKLINE>
     adipiscing elit
+
+    Should print the splited text:
+    >>> text_indentation("Holberton School")
+    Holberton School
+
+    Should print the splited text:  
+    >>> text_indentation("Holberton.School")
+    Holberton.
+    School
+
+    Should print the splited text:
+    >>> text_indentation("Holberton. School? How are you: John")
+    Holberton.
+    School?
+    How are you:
+    John
 
     Should print just the text:
     >>> text_indentation("Every one knew he could foretell wars and famines, \

@@ -12,4 +12,4 @@ def text_indentation(text):
 
     for deli in ['.', '?', ':']:
         text = str(deli + "\n\n").join(ch.strip() for ch in text.split(deli))
-    print("{}".format(text))
+    print("{}".format(text.strip()))
