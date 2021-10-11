@@ -3,8 +3,6 @@
 ======================
 Class BaseGeometry
 ========
-
-
 Class BaseGeometry with an area method that raises an error and and integer_validator
 to validate the entry argumnet of value.
 
