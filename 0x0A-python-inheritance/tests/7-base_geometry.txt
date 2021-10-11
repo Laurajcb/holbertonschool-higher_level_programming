@@ -3,13 +3,31 @@
 ======================
 Class BaseGeometry
 ========
+
+
 Class BaseGeometry with an area method that raises an error and and integer_validator
 to validate the entry argumnet of value.
 
 Tests:
 -----
+    Checking docstring for module:
+    >>> __import__('7-base_geometry').__doc__ != None
+    True
+
+    Checking docstring for class:
+	>>> __import__('7-base_geometry').BaseGeometry.__doc__ != None
+	True
+
+    Checking docstring for methods:
+	>>> __import__('7-base_geometry').BaseGeometry.integer_validator.__doc__ != None
+	True
+	>>> __import__('7-base_geometry').BaseGeometry.area.__doc__ != None
+	True
+
+    Import module:
+    -------------
     >>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
-    
+
     Create a new instance of BaseGeometry class:
     >>> base_g = BaseGeometry()
 
@@ -21,12 +39,6 @@ Tests:
     Traceback (most recent call last):
     ...
     TypeError: Peter must be an integer
-    
-    Should raise TypeError:
-    >>> base_g.integer_validator(5.89)
-    Traceback (most recent call last):
-    ...
-    TypeError: integer_validator() missing 1 required positional argument: 'value'
 
     Should raise ValueError:
     >>> base_g.integer_validator("Peter", -37)
@@ -45,6 +57,12 @@ Tests:
     Traceback (most recent call last):
     ...
     Exception: area() is not implemented
+
+    Create a new instance of BaseGeometry class with argument:
+    >>> base_g = BaseGeometry(5)
+    Traceback (most recent call last):
+    ...
+    TypeError: object() takes no parameters
 
     Checking calling integer_validator with no arguments:
 	>>> base_g.integer_validator()
