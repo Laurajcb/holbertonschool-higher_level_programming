@@ -8,19 +8,6 @@ to validate the entry argumnet of value.
 
 Tests:
 -----
-    Checking docstring for module:
-    >>> __import__('7-base_geometry').__doc__ != None
-    True
-
-    Checking docstring for class:
-	>>> __import__('7-base_geometry').BaseGeometry.__doc__ != None
-	True
-
-    Checking docstring for methods:
-	>>> __import__('7-base_geometry').BaseGeometry.integer_validator.__doc__ != None
-	True
-	>>> __import__('7-base_geometry').BaseGeometry.area.__doc__ != None
-	True
 
     Import module:
     -------------
@@ -56,11 +43,7 @@ Tests:
     ...
     Exception: area() is not implemented
 
-    Create a new instance of BaseGeometry class with argument:
-    >>> base_g = BaseGeometry(5)
-    Traceback (most recent call last):
-    ...
-    TypeError: object() takes no parameters
+    
 
     Checking calling integer_validator with no arguments:
 	>>> base_g.integer_validator()
