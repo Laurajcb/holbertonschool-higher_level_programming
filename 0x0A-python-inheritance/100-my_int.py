@@ -17,4 +17,3 @@ class MyInt(int):
         Difference
         """
         return int(self) == int(other)
-
