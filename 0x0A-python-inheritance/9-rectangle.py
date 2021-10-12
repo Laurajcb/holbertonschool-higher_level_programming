@@ -1,4 +1,4 @@
-#!/usr/bin?python3
+#!/usr/bin/python3
 """
 Write a class Rectangle that inherits from BaseGeometry
 (7-base_geometry.py).
@@ -23,8 +23,8 @@ class Rectangle(BaseGeometry):
         return self.__height * self.__width
 
     def __str__(self):
-        """Return a description of Rectangle
-        Returns:
-            str: [Rectangle] <width>/<height>
+        """
+        Return a description of Rectangle
+        Returns:[Rectangle] <width>/<height>
         """
         return "[Rectangle] {}/{}".format(self.__width, self.__height)

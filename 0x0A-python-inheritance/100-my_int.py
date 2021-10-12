@@ -4,7 +4,6 @@
 
 
 class MyInt(int):
-
     def __eq__(self, other):
         """
         Comparison using == operator __eq__ method
