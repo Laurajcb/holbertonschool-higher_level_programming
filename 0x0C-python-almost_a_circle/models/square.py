@@ -32,6 +32,19 @@ class Square(Rectangle):
         return "[Square] ({}) {}/{} - {}"\
             .format(self.id, self.x, self.y, self.width)
 
+    def update(self, *args, **kwargs):
+        """Adding the public method that assigns
+        an argument to each attribute:
+        """
+        if args is not None:
+            properties = ['id', 'size', 'x', 'y']
+            for index, arg in enumerate(args):
+                setattr(self, properties[index], arg)
+
+        if kwargs is not None:
+            for key, value in kwargs.items():
+                setattr(self, key, value)
+
     def to_dictionary(self):
         """Create a dict"""
         return {"id": self.id,
