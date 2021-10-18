@@ -58,6 +58,8 @@ class Base:
     def create(cls, **dictionary):
         """Returns an instance with all attributes
         already set"""
+        from models.rectangle import Rectangle
+        from models.square import Square
         dummy = cls(2, 2)
         dummy.update(**dictionary)
         return dummy
