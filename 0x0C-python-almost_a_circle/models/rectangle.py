@@ -11,6 +11,7 @@ class Rectangle(Base):
     Class Rectangle that inherits from Base
     """
     def __init__(self, width, height, x=0, y=0, id=None):
+        """Constructor"""
         super().__init__(id)
         self.width = width
         self.height = height
@@ -19,6 +20,7 @@ class Rectangle(Base):
 
     @property
     def width(self):
+        """Getter for private attribute"""
         return self.__width
 
     @width.setter
@@ -32,6 +34,7 @@ class Rectangle(Base):
 
     @property
     def height(self):
+        """Getter for private attribute"""
         return self.__height
 
     @height.setter
@@ -45,6 +48,7 @@ class Rectangle(Base):
 
     @property
     def x(self):
+        """Getter for private attribute"""
         return self.__x
 
     @x.setter
@@ -58,6 +62,7 @@ class Rectangle(Base):
 
     @property
     def y(self):
+        """Getter for private attribute"""
         return self.__y
 
     @y.setter
@@ -99,6 +104,8 @@ class Rectangle(Base):
         if args is not None:
             properties = ['id', 'width', 'height', 'x', 'y']
             for index, arg in enumerate(args):
+                if index > 4:
+                    break
                 setattr(self, properties[index], arg)
 
         if kwargs is not None:

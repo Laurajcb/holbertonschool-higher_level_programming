@@ -10,11 +10,12 @@ class Square(Rectangle):
     Defines a Squeare class
     """
     def __init__(self, size, x=0, y=0, id=None):
+        """Constructor"""
         super().__init__(size, size, x, y, id)
 
     @property
     def size(self):
-        """ Getter """
+        """Getter for private attribute"""
         return self.width
 
     @size.setter
@@ -39,6 +40,8 @@ class Square(Rectangle):
         if args is not None:
             properties = ['id', 'size', 'x', 'y']
             for index, arg in enumerate(args):
+                if index > 3:
+                    break
                 setattr(self, properties[index], arg)
 
         if kwargs is not None:
