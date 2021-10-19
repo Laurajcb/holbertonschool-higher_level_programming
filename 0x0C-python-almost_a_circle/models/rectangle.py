@@ -101,12 +101,14 @@ class Rectangle(Base):
         """Adding the public method that assigns
         an argument to each attribute:
         """
+        properties = ['id', 'width', 'height', 'x', 'y']
+
         if kwargs is not None and not args:
             for key, value in kwargs.items():
-                setattr(self, key, value)
+                if key in properties:
+                    setattr(self, key, value)
 
         if args is not None:
-            properties = ['id', 'width', 'height', 'x', 'y']
             for index, arg in enumerate(args):
                 if index > 4:
                     break

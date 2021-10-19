@@ -37,12 +37,14 @@ class Square(Rectangle):
         """Adding the public method that assigns
         an argument to each attribute:
         """
+        properties = ['id', 'size', 'x', 'y']
+
         if kwargs is not None and not args:
             for key, value in kwargs.items():
-                setattr(self, key, value)
+                if key in properties:
+                    setattr(self, key, value)
 
         if args is not None:
-            properties = ['id', 'size', 'x', 'y']
             for index, arg in enumerate(args):
                 if index > 3:
                     break

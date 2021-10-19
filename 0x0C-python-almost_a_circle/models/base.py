@@ -78,7 +78,9 @@ class Base:
             with open(json_file, "r", encoding="utf-8") as f:
                 json_str = f.read()
         except FileNotFoundError:
-            return list()
+            return []
+        except IOError:
+            return []
 
         obj_list = []
         dict_json = cls.from_json_string(json_str)
