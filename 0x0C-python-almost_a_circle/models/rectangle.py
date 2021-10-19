@@ -101,7 +101,7 @@ class Rectangle(Base):
         """Adding the public method that assigns
         an argument to each attribute:
         """
-        if kwargs is not None:
+        if kwargs is not None and not args:
             for key, value in kwargs.items():
                 setattr(self, key, value)
 

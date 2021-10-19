@@ -24,7 +24,7 @@ class TestBaseTypos(unittest.TestCase):
                          "Found code style errors (and warnings).")
 
     def test_pep8_base(self):
-        """ Test the test file xD """
+        """ Test the test file"""
         pep8style = pep8.StyleGuide(quiet=True)
         result = pep8style.check_files(['tests/test_models/test_base.py'])
         self.assertEqual(result.total_errors, 0,
