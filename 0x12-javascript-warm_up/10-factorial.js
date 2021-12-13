@@ -1,10 +1,15 @@
 #!/usr/bin/node
 // script that computes and prints a factorial
-function factorial (num) {
-    if (!num || num < 2) {
-      return 1;
-    }
-    return num * factorial(num - 1);
+function factorial (n) {
+  let total = 1;
+  let i = 1;
+  if (!n) {
+    return 1;
   }
-  
-  console.log(factorial(parseInt(process.argv[2])));
+  while (i <= n) {
+    total = total * i;
+    i++;
+  }
+  return total;
+}
+console.log(factorial(parseInt(process.argv[2])));
