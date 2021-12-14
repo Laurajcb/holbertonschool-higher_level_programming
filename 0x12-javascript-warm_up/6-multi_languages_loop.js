@@ -1,9 +1,6 @@
 #!/usr/bin/node
-const args = process.argv;
-
-if (isNaN(args[2])) {
-  console.log('Not a number');
-} else {
-  const number = parseInt(args[2]);
-  console.log('My number: ' + number);
+/*script that prints 3 lines: but by using an array of string and a loop*/
+const myArray = ['C is fun', 'Python is cool', 'JavaScript is amazing'];
+for (let i = 0; i < myArray.length; i++) {
+  console.log(myArray[i]);
 }
