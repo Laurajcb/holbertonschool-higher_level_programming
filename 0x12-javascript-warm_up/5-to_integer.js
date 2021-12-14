@@ -1,8 +1,9 @@
 #!/usr/bin/node
-const number = parseInt(process.argv[2]);
+//Script that prints My number: <first argument converted in integer>
 
-if (number) {
-  console.log('My number: ' + `${number}`);
+const toNumber = process.argv[2];
+if (Number(toNumber)) {
+  console.log('My number: ' + toNumber);
 } else {
   console.log('Not a number');
 }
