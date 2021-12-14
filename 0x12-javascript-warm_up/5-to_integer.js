@@ -1,4 +1,4 @@
-#!/usr/bin/node
+#!/usr/bin/env node
 //Script that prints My number: <first argument converted in integer>
 
 const toNumber = process.argv[2];
