@@ -1,5 +1,5 @@
 #!/usr/bin/node
-//Script that prints the addition of 2 integers
+/*Script that prints the addition of 2 integers */
 function add (a, b) {
   console.log(a + b);
 }
