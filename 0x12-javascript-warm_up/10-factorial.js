@@ -1,15 +1,12 @@
 #!/usr/bin/node
 // script that computes and prints a factorial
-function factorial (n) {
-  let total = 1;
-  let i = 1;
-  if (!n) {
-    return 1;
+
+const myArgs = process.argv[2];
+function factorial (myArgs) {
+  if (isNaN(myArgs) || myArgs === 1) {
+    return (1);
+  } else {
+    return (myArgs * factorial(myArgs - 1));
   }
-  while (i <= n) {
-    total = total * i;
-    i++;
-  }
-  return total;
 }
-console.log(factorial(parseInt(process.argv[2])));
+console.log(factorial(parseInt(myArgs)));
