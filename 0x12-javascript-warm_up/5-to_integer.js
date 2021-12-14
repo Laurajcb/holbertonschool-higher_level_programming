@@ -1,10 +1,10 @@
-#!/usr/bin/env node
-/*Script that prints My number: <first argument converted in integer> */
-const args = process.argv;
+#!/usr/bin/node
+// prints the message if the first argument can be converted to an integer
 
-if (isNaN(args[2])) {
-  console.log('Not a number');
+const num = parseInt(process.argv[2]);
+if (!isNaN(num)) {
+  console.log('My number:', num);
 } else {
-  const number = parseInt(args[2]);
-  console.log('My number: ' + number);
+  console.log('Not a number');
 }
+
