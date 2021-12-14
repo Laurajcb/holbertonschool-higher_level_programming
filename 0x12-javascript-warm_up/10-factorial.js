@@ -1,6 +1,5 @@
 #!/usr/bin/node
 // script that computes and prints a factorial
-
 const myArgs = process.argv[2];
 function factorial (myArgs) {
   if (isNaN(myArgs) || myArgs === 1) {

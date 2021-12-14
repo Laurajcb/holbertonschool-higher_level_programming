@@ -1,6 +1,5 @@
 #!/usr/bin/node
 //prints My number: <first argv into int>
-
 const num = parseInt(process.argv[2]);
 if (!isNaN(num)) {
   console.log('My number:', num);
