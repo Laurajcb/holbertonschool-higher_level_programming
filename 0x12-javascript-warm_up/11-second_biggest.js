@@ -1,12 +1,14 @@
 #!/usr/bin/node
 // script that searches the second biggest integer in the list of arguments.
-const array = process.argv.slice(2).map(element => Number.parseInt(element));
-const array = process.argv.slice(2);
+const args = process.argv;
 
-if (array.length <= 1) {
-  console.log('0');
+if (args[2] === undefined || args[3] === undefined) {
+  console.log(0);
 } else {
-  array.sort((a, b) => a - b);
-  const len = array.length;
-  console.log(array[len - 2]);
+  const newArray = [];
+  for (let i = 2; i < args.length; i++) {
+    newArray.push(parseInt(args[i]));
+  }
+  newArray.sort(function (a, b) { return a - b; });
+  console.log(newArray[newArray.length - 2]);
 }

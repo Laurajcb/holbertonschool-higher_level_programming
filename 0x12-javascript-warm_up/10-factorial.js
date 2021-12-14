@@ -1,11 +1,17 @@
 #!/usr/bin/node
 // script that computes and prints a factorial
-function factorial (n) {
-  if (isNaN(n) || n === 0) {
-    return 1;
-  } else {
-    return n * factorial(n - 1);
+const args = process.argv;
+
+function computeFactorial (number) {
+  let result;
+
+  if (isNaN(number) || number <= 1) {
+    result = 1;
+  } else if (number > 1) {
+    result = parseInt(number) * computeFactorial(parseInt(number) - 1);
   }
+
+  return result;
 }
 
-console.log(factorial(parseInt(process.argv[2])));
+console.log(computeFactorial(args[2]));

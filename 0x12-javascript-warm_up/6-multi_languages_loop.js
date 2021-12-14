@@ -2,6 +2,6 @@
 //script that prints 3 lines: but by using an array of string and a loop
 
 const myArray = ['C is fun', 'Python is cool', 'JavaScript is amazing'];
-myArray.forEach(function printArray (myArray) {
-  console.log(myArray);
-});
+for (let i = 0; i < 3; i++) {
+  console.log(array[i] + ' is ' + array[i + 3]);
+}
