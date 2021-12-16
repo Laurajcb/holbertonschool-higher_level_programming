@@ -8,9 +8,9 @@ import MySQLdb
 from sys import argv
 
 
-if __name__ == "__main__":
-    db = MySQL.connect(host='localhots', port=3306,
-                       user=argv[1], passwd=sys.argv[2], db=sys.argv[3])
+if __name__ == "_main_":
+    db = connect(host='localhots', port=3306,
+                       user=argv[1], passwd=argv[2], db=argv[3])
     cur = db.cursor()
     cur.execute("SELECT * FORM 'state'")
     row = cur.fetchall()
