@@ -4,7 +4,7 @@ List all the state from a db hbtn_0e_0_usa
 """
 
 
-from MySQLdb import _mysql
+import MySQLdb
 from sys import argv
 
 
