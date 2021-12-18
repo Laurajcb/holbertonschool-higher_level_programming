@@ -18,4 +18,4 @@ if __name__ == '__main__':
     query_rows = cur.fetchall()
     print(", ".join(row[0] for row in query_rows))
     cur.close()
-    cur.close()
+    conn.close()
