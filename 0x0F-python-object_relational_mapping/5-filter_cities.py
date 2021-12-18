@@ -3,14 +3,14 @@
 Lists all cities from the database hbtn_0e_4_usa
 """
 
-import MySQLdb
-from sys import argv
 
+import sys
+import MySQLdb
 
 if __name__ == "__main__":
     cities_string = ""
     db = MySQLdb.connect(host="localhost", port=3306,
-                         user=argv[1], passwd=argv[2], db=argv[3])
+                         user=sys.argv[1], passwd=sys.argv[2], db=sys.argv[3])
 
     cur = db.cursor()
     cur.execute("""
@@ -19,7 +19,7 @@ if __name__ == "__main__":
         ON cities.state_id = states.id
         WHERE states.name = %s
         ORDER BY cities.id ASC
-    """, (argv[4],))
+    """, (sys.argv[4],))
 
     info = cur.fetchall()
 
