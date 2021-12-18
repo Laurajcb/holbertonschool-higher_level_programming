@@ -10,13 +10,14 @@ from sys import argv
 
 
 if __name__ == '__main__':
-    db = MySQLdb.connect(host='localhost', port=3306,
-                         user=argv[1], passwd=argv[2], db=argv[3])
-    cur = db.cursor()
-    cur.execute("SELECT * FROM states WHERE name LIKE BINARY 'N%' ORDER BY states.id ASC")
-    row = cur.fetchall()
-    for state in row:
+    conn = MySQLdb.connect(host='localhost', port=3306,
+                           user=argv[1], passwd=argv[2], db=argv[3])
+    cur = conn.cursor()
+    cur.execute("SELECT * FROM states\
+    WHERE name LIKE 'N%' ORDER BY states.id ASC")
+    query_rows = cur.fetchall()
+    for row in query_rows:
         if row[1][0] == 'N':
-            print(state)
+            print(row)
     cur.close()
-    db.close()
+    conn.close()
