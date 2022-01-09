@@ -3,6 +3,9 @@
 
 
 def find_peak(list_of_integers):
+    if type(list_of_integers) is not list:
+        return None
+
     if len(list_of_integers) == 0:
         return None
 
