@@ -3,13 +3,15 @@
 
 
 def find_peak(list_of_integers):
-    peak = None if len(list_of_integers) == 0 else list_of_integers[0]
+    if len(list_of_integers) == 0:
+        return None
 
-    for i in range(len(list_of_integers)):
+    peak = list_of_integers[0]
+    for i in range(1, len(list_of_integers)):
 
         if list_of_integers[i] >= peak:
             peak = list_of_integers[i]
-        else:
+        elif list_of_integers[i] >= 0:
             break
 
     return peak
