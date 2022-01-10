@@ -1,11 +1,11 @@
 #!/usr/bin/python3
 """ This module contains a script to fetch a URL """
-import requests
+import urllib.request
 
 
-if __name__ == "__main__":
-    r = requests.get('https://intranet.hbtn.io/status')
+with urllib.request.urlopen('https://intranet.hbtn.io/status') as response:
+    html = response.read()
     print("Body response:")
-    txt = r.text
-    print("\t- type:", type(txt))
-    print("\t- content:", txt)
+    print("\t- type: {}".format(type(html)))
+    print("\t- content: {}".format(html))
+    print("\t- utf8 content: {}".format(html.decode('utf-8')))
